@@ -1,0 +1,19 @@
+ why data structures and algorithms are essential in handling large inventories?
+
+    In a warehouse inventory system, thousands of products may be stored. Efficient data structures and algorithms help to: 
+          i)Store large amounts of product data efficiently. 
+          ii)Quickly search for a product.
+          iii)Add new products without hurting performance.
+          iv)Update product details easily. 
+          v)Delete products when they are no longer available. 
+          vi)Reduce memory use and execution time.
+    Without proper data structures, operations like searching and updating products would slow down as the inventory grows.
+
+The types of data structures used in InventoryManagementSystem
+  1)Array
+  2)ArrayList
+  3)LinkedLiat
+  4)HashMap
+  5)Treemap
+
+  The best method which is used here in InventoryManagementSystem is  HashMap because the Productid storing must be unique for each product and need to store to productName along with its productId

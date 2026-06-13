@@ -1,0 +1,10 @@
+For the Project Inventory management system the methods to add, update, and delete products from the inventory is used.
+so I used Data Structure HashMap to add ProductId and ProductName as key and value pair
+
+i) Add Product - for this the HashMap method put() is used and it's time complexity is O(1).           
+ii) Search Product - for this the HashMap methodget() is used and it's time complexity is O(1)           
+iii)Update Product - for this the HashMap method both get() and set() is used and it's time complexity is O(1)            
+iv)Delete Product - for this the HashMap method remove() is used and it's time complexity is O(1)            
+v)Display Products - for this the HashMap Traversal is used and it's time complexity is O(n)           
+
+Optimise Approch among the suitable data Structure is hashmap because it has O(1) time complexity and also it store key as unique value so that it could not be duplicated instead of checking is the productid is duplicate 

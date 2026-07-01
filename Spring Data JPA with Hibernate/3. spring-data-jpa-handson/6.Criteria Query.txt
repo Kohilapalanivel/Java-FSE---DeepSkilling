@@ -1,0 +1,58 @@
+Introduction:
+The Criteria Query is a facility offered by JPA and Hibernate that enables you to build SQL queries programmatically rather than writing static HQL or SQL queries. This is mostly required when the search conditions become dynamic and depend on the user inputs.
+
+Need for Criteria Query:
+Many times in practice, there is a requirement for users to filter their searches with various filters. Since the choice of filters depends on the user and each user selects different filters, it is not feasible to write a distinct HQL query for all the possible combinations.
+
+Example Situation:
+Let us assume an example of a shopping website such as Amazon.
+
+The user searches for "Laptop" with one or more filters including:
+• Customer Review
+• Hard Disk Capacity
+• RAM Capacity
+• CPU Speed
+• Operating System
+• Weight
+• Processor type
+
+Few users select only RAM capacity.
+Some others select RAM capacity and operating system.
+Whereas few select all filters available.
+
+Thus, Criteria Query would be the best fit as WHERE condition varies according to the filters selected.
+
+Advantages of Criteria Query
+• Queries created dynamically
+• No need for writing several HQL queries
+• Type-safe
+• Easy to maintain
+• Suitable for use in advance search form
+• Reduced code complexity
+
+Comparison between HQL and Criteria Query
+
+HQL
+• Queries are defined as a constant string
+• Useful when dealing with static queries
+• Handling dynamic queries difficult
+
+Criteria Query
+• Query is built programmatically
+• Best when dealing with dynamic search conditions
+• Easy to add and remove filters at run-time
+
+Working principle
+1. Create an instance of CriteriaBuilder
+2. Create an instance of CriteriaQuery
+3. Root entity definition
+4. Filters definition (Predicates) based on user input
+5. Execution using EntityManager
+
+Uses
+• Search products in e-commerce websites
+• Searching employees with various filters
+• Student management systems
+• Banking applications
+• Hospital management systems
+• Dashboard applications

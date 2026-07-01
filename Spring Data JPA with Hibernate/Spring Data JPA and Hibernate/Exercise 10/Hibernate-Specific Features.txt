@@ -1,0 +1,46 @@
+Hibernate is an Object Relational Mapping (ORM) framework used by Spring Data JPA to map Java objects to database tables. In addition to standard JPA features, Hibernate provides several advanced capabilities that improve performance and reduce development effort.
+
+1. Hibernate-Specific Annotations
+
+Hibernate provides annotations that automate common tasks.
+
+@CreationTimestamp – Automatically stores the date and time when an entity is created.
+@UpdateTimestamp – Automatically updates the date and time whenever an entity is modified.
+
+These annotations eliminate the need to manually update timestamp fields in the application.
+
+2. Hibernate Dialect and Properties
+
+The Hibernate dialect defines how Hibernate generates SQL statements for a specific database.
+
+For this project, the H2 database uses the following dialect:
+
+org.hibernate.dialect.H2Dialect
+
+Common Hibernate properties include:
+
+spring.jpa.hibernate.ddl-auto=update – Automatically updates the database schema.
+spring.jpa.show-sql=true – Displays generated SQL statements.
+spring.jpa.properties.hibernate.format_sql=true – Formats SQL output for better readability.
+
+These properties simplify development and debugging.
+
+3. Batch Processing
+
+Batch processing is a Hibernate optimization technique used to perform bulk database operations efficiently. Instead of executing one SQL statement for every record, Hibernate groups multiple operations into batches before sending them to the database.
+
+Batch processing improves application performance by:
+
+Reducing database round trips.
+Improving insert and update speed.
+Efficiently handling large volumes of data.
+Reducing execution time for bulk operations.
+
+Batch processing is especially useful when importing or updating large numbers of employee records.
+
+Advantages
+Improves database performance.
+Automates entity auditing using timestamps.
+Generates database-specific SQL through Hibernate dialect.
+Optimizes bulk insert and update operations.
+Reduces application development effort.

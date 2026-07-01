@@ -1,0 +1,34 @@
+USE ormlearn;
+
+CREATE TABLE stock
+(
+    st_id INT NOT NULL AUTO_INCREMENT,
+    st_code VARCHAR(10),
+    st_date DATE,
+    st_open DECIMAL(10,2),
+    st_close DECIMAL(10,2),
+    st_volume BIGINT,
+    PRIMARY KEY(st_id)
+);
+DESC stock;
+INSERT INTO stock (st_code, st_date, st_open, st_close, st_volume)
+VALUES
+('FB','2019-09-03',184.00,182.39,9779400),
+('FB','2019-09-04',184.65,187.14,11308000),
+('FB','2019-09-05',188.53,190.90,13876700),
+
+('GOOGL','2019-04-22',1236.67,1253.76,954200),
+('GOOGL','2019-04-29',1280.51,1296.20,3618400),
+
+('NFLX','2018-12-24',242.00,233.88,9547600),
+('NFLX','2018-12-21',263.83,246.39,21397600),
+('NFLX','2018-12-26',233.92,253.67,14402700);
+ALTER TABLE stock
+MODIFY st_open DOUBLE;
+
+ALTER TABLE stock
+MODIFY st_close DOUBLE;
+
+ALTER TABLE stock
+MODIFY st_volume BIGINT;
+SELECT * FROM stock;

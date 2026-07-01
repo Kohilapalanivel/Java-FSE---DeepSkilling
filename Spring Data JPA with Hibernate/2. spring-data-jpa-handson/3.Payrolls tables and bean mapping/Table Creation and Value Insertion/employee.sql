@@ -9,3 +9,9 @@ CREATE TABLE employee (
         FOREIGN KEY (em_dp_id)
         REFERENCES department(dp_id)
 );
+INSERT INTO employee
+(em_name, em_salary, em_permanent, em_date_of_birth, em_dp_id)
+VALUES
+('John',50000,TRUE,'1998-05-20',1),
+('David',60000,TRUE,'1996-02-15',2),
+('Priya',45000,FALSE,'2000-09-10',1);

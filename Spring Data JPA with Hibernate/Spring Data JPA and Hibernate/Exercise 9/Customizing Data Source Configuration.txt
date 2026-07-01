@@ -1,0 +1,16 @@
+The Spring Boot allows setting up automatic DataSource. The developers don't need to set up the data source manually with the help of Java code anymore, but can put all necessary settings to the application.properties file.
+
+In the current project, the H2 in-memory database is used. Its connection is provided via the JDBC URL, driver, username and password. Hibernate is integrated into the H2 database via dialect and the tables are generated and/or updated automatically.
+
+The H2 Console is available for the developer in order to test the database content.
+
+Another feature of Spring Boot is its ability to use externalized configuration. The database parameters can be changed without any source code change and are available in the application.properties, application.yml, environment variable, and external files.
+
+For the enterprise applications, Spring Boot supports multiple data sources. This means that separate databases can be configured for various modules of the system like employees management, payroll or reporting. Every single data source is configurable and has its transaction manager.
+
+Advantages
+Decreases number of database settings manually;
+Facilitates setting up database connections;
+Allows changing the configuration externally without code modification;
+Integration with different databases becomes much easier.
+Supports multiple data sources for enterprise applications.

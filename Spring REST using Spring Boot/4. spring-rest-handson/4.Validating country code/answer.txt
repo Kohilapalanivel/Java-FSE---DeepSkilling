@@ -1,0 +1,31 @@
+If another controller such as EmployeeController also requires validation, we would have to write the same validation code again in the addEmployee() method.
+
+For example, again we would need to write:
+
+ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+Validator validator = factory.getValidator();
+
+Set<ConstraintViolation<Employee>> violations = validator.validate(employee);
+
+List<String> errors = new ArrayList<>();
+
+for (ConstraintViolation<Employee> violation : violations) {
+    errors.add(violation.getMessage());
+}
+
+if (!violations.isEmpty()) {
+    throw new ResponseStatusException(HttpStatus.BAD_REQUEST, errors.toString());
+}
+
+This same block would be repeated in every controller.
+
+
+Disadvantage of the current solution
+
+The current approach has several disadvantages:
+
+- Duplicate validation code in every controller.
+- Violates the DRY (Don't Repeat Yourself) principle.
+- Difficult to maintain. If validation logic changes, every controller must be updated.
+- Makes controller methods lengthy and less readable.
+- Increases chances of mistakes if one controller is updated but another is not.

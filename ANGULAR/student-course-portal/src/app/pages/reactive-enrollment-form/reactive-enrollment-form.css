@@ -1,0 +1,31 @@
+input,
+select {
+
+  width: 300px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+}
+
+button {
+
+  padding: 8px 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+
+  border: 2px solid red;
+
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+
+  border: 2px solid green;
+
+}

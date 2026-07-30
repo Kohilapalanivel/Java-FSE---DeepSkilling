@@ -1,0 +1,50 @@
+<h1>{{ portalName }}</h1>
+
+<p>
+  Manage your courses, enrollments and profile.
+</p>
+
+<div class="card">
+
+  <h3>Student Dashboard</h3>
+
+  <p>Courses Available : {{ coursesAvailable }}</p>
+
+  <p>Enrolled Courses : 3</p>
+
+  <p>Current GPA : 3.8</p>
+
+</div>
+
+<hr>
+
+<h2>Angular Data Binding Demo</h2>
+
+<!-- Property Binding -->
+<button [disabled]="!isPortalActive"
+        (click)="onEnrollClick()">
+
+    Enroll Now
+
+</button>
+
+<p>{{ message }}</p>
+
+<hr>
+
+<input
+type="text"
+placeholder="Search Course"
+[(ngModel)]="searchTerm">
+
+<p>Searching for : {{ searchTerm }}</p>
+
+<!--
+[property]
+One-way binding
+Component → DOM
+
+[(ngModel)]
+Two-way binding
+Component ↔ DOM
+-->
